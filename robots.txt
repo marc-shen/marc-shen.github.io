@@ -4,4 +4,4 @@ User-agent: GPTBot
 Disallow: /
 User-agent: *
 Disallow:
-Sitemap: http://marc.stic.work/sitemap.xml
+Sitemap: https://marc.stic.work/sitemap.xml

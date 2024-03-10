@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>ChanTian‘s Blog</title>
-    <link href="http://marc.stic.work/feed.xml" rel="self" />
-    <link href="http://marc.stic.work" />
+    <link href="https://marc.stic.work/feed.xml" rel="self" />
+    <link href="https://marc.stic.work" />
     <updated>2024-03-10T23:21:03+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
-    <id>http://marc.stic.work</id>
+    <id>https://marc.stic.work</id>
 
     <entry>
         <title>Telescope</title>
         <author>
             <name>梴湉ChanTian</name>
         </author>
-        <link href="http://marc.stic.work/telescope.html"/>
-        <id>http://marc.stic.work/telescope.html</id>
+        <link href="https://marc.stic.work/telescope.html"/>
+        <id>https://marc.stic.work/telescope.html</id>
 
         <updated>2024-03-10T23:21:03+08:00</updated>
             <summary>
