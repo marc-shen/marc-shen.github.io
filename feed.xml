@@ -3,12 +3,51 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-10T23:21:03+08:00</updated>
+    <updated>2024-03-11T00:13:23+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
+    <entry>
+        <title>日本旅游</title>
+        <author>
+            <name>梴湉ChanTian</name>
+        </author>
+        <link href="https://marc.stic.work/ri-ben-lu-you.html"/>
+        <id>https://marc.stic.work/ri-ben-lu-you.html</id>
+
+        <updated>2024-03-11T00:13:23+08:00</updated>
+            <summary>
+                <![CDATA[
+                    京都 岚山 清水寺 八坂神社 + 祺园 京都御所 伏見稻荷大社 金閣寺 锦市场 鸭川 道顿堀 心斋桥 + 天满宫 大阪城公园（天守阁） 8日到东京，下午去金泽 9日上午在金泽，下午出发去京都，晚上在京都闲逛 10日早前往大阪，晚上返回京都 11日奈良 12日京都参观 13日上午京都，下午东京
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 class="md-end-block md-heading"><span class="md-plain md-expand">京都</span></h2>
+<p class="md-end-block md-p"><span class="md-plain">岚山</span></p>
+<p class="md-end-block md-p"><span class="md-plain">清水寺</span></p>
+<p class="md-end-block md-p"><span class="md-plain">八坂神社 + 祺园</span></p>
+<p class="md-end-block md-p"><span class="md-plain">京都御所</span></p>
+<p class="md-end-block md-p"><span class="md-plain">伏見稻荷大社</span></p>
+<p class="md-end-block md-p"><span class="md-plain">金閣寺</span></p>
+<p class="md-end-block md-p"><span class="md-plain">锦市场</span></p>
+<p class="md-end-block md-p"><span class="md-plain">鸭川</span></p>
+<h2 class="md-end-block md-heading"><span class="md-plain">大阪</span></h2>
+<p class="md-end-block md-p"><span class="md-plain">道顿堀</span></p>
+<p class="md-end-block md-p"><span class="md-plain">心斋桥 + 天满宫</span></p>
+<p class="md-end-block md-p"><span class="md-plain">大阪城公园（天守阁）</span></p>
+<h2 class="md-end-block md-heading"><span class="md-plain">Time List</span></h2>
+<p class="md-end-block md-p"><span class="md-plain">8日到东京，下午去金泽</span></p>
+<p class="md-end-block md-p"><span class="md-plain">9日上午在金泽，下午出发去京都，晚上在京都闲逛</span></p>
+<p class="md-end-block md-p"><span class="md-plain">10日早前往大阪，晚上返回京都</span></p>
+<p class="md-end-block md-p"><span class="md-plain">11日奈良</span></p>
+<p class="md-end-block md-p"><span class="md-plain">12日京都参观</span></p>
+<p class="md-end-block md-p"><span class="md-plain">13日上午京都，下午东京</span></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Telescope</title>
         <author>
