@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>newsboat配置 - ChanTian‘s Blog</title><meta name="description" content="背景 newsboat是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网 使用 配置订阅源&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://marc.stic.work/newsboatpei-zhi-2.html"><link rel="alternate" type="application/atom+xml" href="https://marc.stic.work/feed.xml"><link rel="alternate" type="application/json" href="https://marc.stic.work/feed.json"><meta property="og:title" content="newsboat配置"><meta property="og:site_name" content="ChanTian‘s Blog"><meta property="og:description" content="背景 newsboat是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网 使用 配置订阅源&hellip;"><meta property="og:url" content="https://marc.stic.work/newsboatpei-zhi-2.html"><meta property="og:type" content="article"><link rel="preload" href="https://marc.stic.work/assets/dynamic/fonts/jetbrainsmono/jetbrainsmono.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://marc.stic.work/assets/css/style.css?v=0643aeb33172d8efe1d48cf7f23a4fbe"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://marc.stic.work/newsboatpei-zhi-2.html"},"headline":"newsboat配置","datePublished":"2024-03-17T00:02","dateModified":"2024-03-17T00:40","description":"背景 newsboat是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网 使用 配置订阅源&hellip;","author":{"@type":"Person","name":"梴湉ChanTian","url":"https://marc.stic.work/authors/chan-tian-chantian/"},"publisher":{"@type":"Organization","name":"梴湉ChanTian"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body><div class="container"><header class="header"><div class="header__logo"><a class="logo" href="https://marc.stic.work/">ChanTian‘s Blog</a></div></header><main class="content"><article class="post"><header><h1 class="post__title">newsboat配置</h1><div class="post__meta"><time datetime="2024-03-17T00:02" class="post__date">March 17, 2024 </time><span class="post__author"><a href="https://marc.stic.work/authors/chan-tian-chantian/" class="feed__author">梴湉ChanTian</a></span></div></header><div class="post__entry"><h1 id="背景">背景</h1><p><code>newsboat</code>是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。</p><h1 id="安装">安装</h1><p>本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如：</p><pre><code class="language-shell"># apt-get
+sudo apt-get install newsboat
+
+# homebrew
+brew install nesboat
+
+# pacman
+pacman -S newsboat
+
+# 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网
+</code></pre><h1 id="使用">使用</h1><h2 id="配置订阅源">配置订阅源</h2><p>想要使用newsboat，首先要设置订阅源，否则连界面都无法打开。 编辑<code>~/.newsboat/urls</code>文件，从而设置订阅源。具体方法就是将网址一行一行地写进这个文件中。</p><p>在这里给出一个示例文件（此内容只用于示例，作者本人对订阅源内容所表述的任何事物不负连带责任）</p><pre><code>https://marc.stic.work/feed.xml
+https://uranium92.tech/feed/
+https://rss.arxiv.org/rss/astro-ph.HE
+https://plink.anyfeeder.com/zaobao/realtime/china
+https://plink.anyfeeder.com/zaobao/realtime/world
+http://www.simple-style.com/feed
+https://wangyurui.com/feed.xml
+https://anotherdayu.com/feed/
+</code></pre><p>另外想要了解更多关于Web Feed相关信息，可以参考<a href="https://wiki.archlinux.org/title/Web_feed">https://wiki.archlinux.org/title/Web_feed</a></p><h2 id="使用-1">使用</h2><p>在配置完订阅源之后可以直接使用<code>newsboat</code>命令来使用。</p><p>值得注意的是，在绝大部分unix系统的TTY中是没有中文支持的，所以建议有条件的情况下最好在正常的现代化虚拟终端，如Terminal、Iterm2等等中使用，而不是在如Ubuntu Server无图形界面的TTY中使用，当然只阅读英文的订阅源是不存在任何问题的。</p><h1 id="其他配置">其他配置</h1><p>newsboat的配置文件在<code>~/.newsboat/conf</code>中，直接编辑这个文件可以来修改newsboat的设置。同样在这里给出一个配置文件的示例，具体参数可以去参考官网。</p><pre><code># general settings
+auto-reload yes
+max-items 50
+
+# externel browser
+browser &quot;/usr/local/bin/w3m %u&quot;
+macro m set browser &quot;/usr/local/bin/mpv %u&quot;; open-in-browser ; set browser &quot;/usr/local/bin/w3m %u&quot;
+macro l set browser &quot;/usr/local/bin/firefox %u&quot;; open-in-browser ; set browser &quot;/usr/local/bin/w3m %u&quot;
+
+# unbind keys
+unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+# solarized
+color background         default   default
+color listnormal         default   default
+color listnormal_unread  default   default
+color listfocus          black     cyan
+color listfocus_unread   black     cyan
+color info               default   black
+color article            default   default
+
+# highlights
+highlight article &quot;^(Title):.*$&quot; blue default
+highlight article &quot;https?://[^ ]+&quot; red default
+highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
+</code></pre><p>外部浏览器除了无图形界面的w3m、links，同样支持有图形界面的浏览器，包括但不限于Safari、Chrome、FireFox等等，可以根据自己需求和喜好决定。</p><p>主题设置可以更换为<code>include /usr/share/doc/newsboat/contrib/colorschemes/universal-color</code> 所有默认主题都在<code>/usr/share/doc/newsboat/contrib/colorschemes/</code>文件夹下。（这些文件位置根据安装方法不同略有差异，如brew安装的位置在<code>/opt/homebrew/share/doc/newsboat/contrib/colorschemes/</code>）</p><h1 id="参考和有用信息">参考和有用信息</h1><p>ArchLinux wiki: <a href="https://wiki.archlinux.org/title/Newsboat">https://wiki.archlinux.org/title/Newsboat</a> newsboat官网: <a href="https://newsboat.org/index.html">https://newsboat.org/index.html</a> newsboat官方IRC聊天室: irc.libera.chat中的#newsboat频道 Github官方repo: <a href="https://github.com/newsboat/newsboat">https://github.com/newsboat/newsboat</a></p></div><footer class="wrapper post__footer"><p class="post__last-updated">This article was updated on March 17, 2024</p><div class="post__share"></div></footer><nav class="pagination"><div class="pagination__title"><span>Read other posts</span></div><div class="pagination__buttons"><a href="https://marc.stic.work/ri-ben-lu-you.html" class="btn previous" rel="prev" aria-label="[MISSING TRANSLATION]:  日本旅游 "><span class="btn__icon">←</span> <span class="btn__text">日本旅游</span></a></div></nav></article></main><footer class="footer"><div class="footer__inner"><div class="footer__copyright"><p>© 2024 Powered by Publii CMS :: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank" rel="noopener">Theme</a> ported by the <a href="https://getpublii.com/customization-service/" target="_blank" rel="noopener">Publii Team</a></p></div></div></footer></div><script defer="defer" src="https://marc.stic.work/assets/js/scripts.min.js?v=74fad06980c30243d91d72c7c57fcdb8"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script></body></html>

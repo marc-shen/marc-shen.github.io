@@ -3,12 +3,99 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-11T00:13:23+08:00</updated>
+    <updated>2024-03-17T00:40:51+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
+    <entry>
+        <title>newsboat配置</title>
+        <author>
+            <name>梴湉ChanTian</name>
+        </author>
+        <link href="https://marc.stic.work/newsboatpei-zhi-2.html"/>
+        <id>https://marc.stic.work/newsboatpei-zhi-2.html</id>
+
+        <updated>2024-03-17T00:40:13+08:00</updated>
+            <summary>
+                <![CDATA[
+                    背景 newsboat是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网 使用 配置订阅源&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h1 id="背景">背景</h1>
+<p><code>newsboat</code>是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。</p><h1 id="安装">安装</h1>
+<p>本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如：</p><pre><code class="language-shell"># apt-get
+sudo apt-get install newsboat
+
+# homebrew
+brew install nesboat
+
+# pacman
+pacman -S newsboat
+
+# 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网
+</code></pre>
+<h1 id="使用">使用</h1>
+<h2 id="配置订阅源">配置订阅源</h2>
+<p>想要使用newsboat，首先要设置订阅源，否则连界面都无法打开。
+编辑<code>~/.newsboat/urls</code>文件，从而设置订阅源。具体方法就是将网址一行一行地写进这个文件中。</p><p>在这里给出一个示例文件（此内容只用于示例，作者本人对订阅源内容所表述的任何事物不负连带责任）</p><pre><code>https://marc.stic.work/feed.xml
+https://uranium92.tech/feed/
+https://rss.arxiv.org/rss/astro-ph.HE
+https://plink.anyfeeder.com/zaobao/realtime/china
+https://plink.anyfeeder.com/zaobao/realtime/world
+http://www.simple-style.com/feed
+https://wangyurui.com/feed.xml
+https://anotherdayu.com/feed/
+</code></pre>
+<p>另外想要了解更多关于Web Feed相关信息，可以参考<a href="https://wiki.archlinux.org/title/Web_feed">https://wiki.archlinux.org/title/Web_feed</a></p><h2 id="使用-1">使用</h2>
+<p>在配置完订阅源之后可以直接使用<code>newsboat</code>命令来使用。</p><p>值得注意的是，在绝大部分unix系统的TTY中是没有中文支持的，所以建议有条件的情况下最好在正常的现代化虚拟终端，如Terminal、Iterm2等等中使用，而不是在如Ubuntu Server无图形界面的TTY中使用，当然只阅读英文的订阅源是不存在任何问题的。</p><h1 id="其他配置">其他配置</h1>
+<p>newsboat的配置文件在<code>~/.newsboat/conf</code>中，直接编辑这个文件可以来修改newsboat的设置。同样在这里给出一个配置文件的示例，具体参数可以去参考官网。</p><pre><code># general settings
+auto-reload yes
+max-items 50
+
+# externel browser
+browser &quot;/usr/local/bin/w3m %u&quot;
+macro m set browser &quot;/usr/local/bin/mpv %u&quot;; open-in-browser ; set browser &quot;/usr/local/bin/w3m %u&quot;
+macro l set browser &quot;/usr/local/bin/firefox %u&quot;; open-in-browser ; set browser &quot;/usr/local/bin/w3m %u&quot;
+
+# unbind keys
+unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+# solarized
+color background         default   default
+color listnormal         default   default
+color listnormal_unread  default   default
+color listfocus          black     cyan
+color listfocus_unread   black     cyan
+color info               default   black
+color article            default   default
+
+# highlights
+highlight article &quot;^(Title):.*$&quot; blue default
+highlight article &quot;https?://[^ ]+&quot; red default
+highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
+</code></pre>
+<p>外部浏览器除了无图形界面的w3m、links，同样支持有图形界面的浏览器，包括但不限于Safari、Chrome、FireFox等等，可以根据自己需求和喜好决定。</p><p>主题设置可以更换为<code>include /usr/share/doc/newsboat/contrib/colorschemes/universal-color</code> 所有默认主题都在<code>/usr/share/doc/newsboat/contrib/colorschemes/</code>文件夹下。（这些文件位置根据安装方法不同略有差异，如brew安装的位置在<code>/opt/homebrew/share/doc/newsboat/contrib/colorschemes/ </code>）</p><h1 id="参考和有用信息">参考和有用信息</h1>
+<p>ArchLinux wiki: <a href="https://wiki.archlinux.org/title/Newsboat">https://wiki.archlinux.org/title/Newsboat</a>
+newsboat官网: <a href="https://newsboat.org/index.html">https://newsboat.org/index.html</a>
+newsboat官方IRC聊天室: irc.libera.chat中的#newsboat频道
+Github官方repo: <a href="https://github.com/newsboat/newsboat">https://github.com/newsboat/newsboat</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>日本旅游</title>
         <author>
@@ -17,10 +104,10 @@
         <link href="https://marc.stic.work/ri-ben-lu-you.html"/>
         <id>https://marc.stic.work/ri-ben-lu-you.html</id>
 
-        <updated>2024-03-11T00:13:23+08:00</updated>
+        <updated>2024-03-17T00:40:51+08:00</updated>
             <summary>
                 <![CDATA[
-                    京都 岚山 清水寺 八坂神社 + 祺园 京都御所 伏見稻荷大社 金閣寺 锦市场 鸭川 道顿堀 心斋桥 + 天满宫 大阪城公园（天守阁） 8日到东京，下午去金泽 9日上午在金泽，下午出发去京都，晚上在京都闲逛 10日早前往大阪，晚上返回京都 11日奈良 12日京都参观 13日上午京都，下午东京
+                    京都 岚山 清水寺 八坂神社 + 祺园 京都御所 伏見稻荷大社 金閣寺 锦市场 鸭川 道顿堀 心斋桥 + 天满宫 大阪城公园（天守阁） (2024年1月) 8日到东京，下午去金泽 9日上午在金泽，下午出发去京都，晚上在京都闲逛 10日早前往大阪，晚上返回京都 11日奈良 12日京都参观 13日上午京都，下午东京
                 ]]>
             </summary>
         <content type="html">
@@ -39,6 +126,7 @@
 <p class="md-end-block md-p"><span class="md-plain">心斋桥 + 天满宫</span></p>
 <p class="md-end-block md-p"><span class="md-plain">大阪城公园（天守阁）</span></p>
 <h2 class="md-end-block md-heading"><span class="md-plain">Time List</span></h2>
+<p>(2024年1月)</p>
 <p class="md-end-block md-p"><span class="md-plain">8日到东京，下午去金泽</span></p>
 <p class="md-end-block md-p"><span class="md-plain">9日上午在金泽，下午出发去京都，晚上在京都闲逛</span></p>
 <p class="md-end-block md-p"><span class="md-plain">10日早前往大阪，晚上返回京都</span></p>
