@@ -3,7 +3,7 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-17T00:40:51+08:00</updated>
+    <updated>2024-03-17T00:43:48+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
@@ -17,16 +17,16 @@
         <link href="https://marc.stic.work/newsboatpei-zhi-2.html"/>
         <id>https://marc.stic.work/newsboatpei-zhi-2.html</id>
 
-        <updated>2024-03-17T00:40:13+08:00</updated>
+        <updated>2024-03-17T00:43:48+08:00</updated>
             <summary>
                 <![CDATA[
-                    背景 newsboat是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网 使用 配置订阅源&hellip;
+                    背景 newsboat https://newsboat.org/index.html 是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。 本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如： # apt-get sudo apt-get install newsboat # homebrew brew install nesboat # pacman pacman -S newsboat # 我只使用了Ubuntu Server、ArchLinux、MacOS，所以只使用了这些包管理器，其他的安装情况还请各位查看newsboat的官网&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <h1 id="背景">背景</h1>
-<p><code>newsboat</code>是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。</p><h1 id="安装">安装</h1>
+<p><code>newsboat</code> <a href="https://newsboat.org/index.html">https://newsboat.org/index.html</a> 是一个在Unix系统中非常好用的RSS/Atom阅读器，尤其是在没有图形界面的情况下。所以当大家使用例如Ubuntu Server、ArchLinux扁平化桌面，或者说你是一个重度终端用户，那使用newsboat来日常查看一些RSS/Atom的订阅是一个非常合适的事情。</p><h1 id="安装">安装</h1>
 <p>本身作为一款开源软件，可以从Github下载源码编译，也可以从各个软件包管理平台下载安装预编译好的程序，比如：</p><pre><code class="language-shell"># apt-get
 sudo apt-get install newsboat
 
@@ -89,10 +89,7 @@ highlight article &quot;https?://[^ ]+&quot; red default
 highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
 </code></pre>
 <p>外部浏览器除了无图形界面的w3m、links，同样支持有图形界面的浏览器，包括但不限于Safari、Chrome、FireFox等等，可以根据自己需求和喜好决定。</p><p>主题设置可以更换为<code>include /usr/share/doc/newsboat/contrib/colorschemes/universal-color</code> 所有默认主题都在<code>/usr/share/doc/newsboat/contrib/colorschemes/</code>文件夹下。（这些文件位置根据安装方法不同略有差异，如brew安装的位置在<code>/opt/homebrew/share/doc/newsboat/contrib/colorschemes/ </code>）</p><h1 id="参考和有用信息">参考和有用信息</h1>
-<p>ArchLinux wiki: <a href="https://wiki.archlinux.org/title/Newsboat">https://wiki.archlinux.org/title/Newsboat</a>
-newsboat官网: <a href="https://newsboat.org/index.html">https://newsboat.org/index.html</a>
-newsboat官方IRC聊天室: irc.libera.chat中的#newsboat频道
-Github官方repo: <a href="https://github.com/newsboat/newsboat">https://github.com/newsboat/newsboat</a></p>
+<p>ArchLinux wiki: <a href="https://wiki.archlinux.org/title/Newsboat">https://wiki.archlinux.org/title/Newsboat</a></p><p>newsboat官网: <a href="https://newsboat.org/index.html">https://newsboat.org/index.html</a></p><p>newsboat官方IRC聊天室: irc.libera.chat中的#newsboat频道</p><p>Github官方repo: <a href="https://github.com/newsboat/newsboat">https://github.com/newsboat/newsboat</a></p>
             ]]>
         </content>
     </entry>
