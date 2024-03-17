@@ -3,7 +3,7 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-17T23:01:31+08:00</updated>
+    <updated>2024-03-17T23:59:06+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
@@ -17,9 +17,17 @@
         <link href="https://marc.stic.work/ce-shi.html"/>
         <id>https://marc.stic.work/ce-shi.html</id>
 
-        <updated>2024-03-17T23:01:31+08:00</updated>
-            <summary></summary>
-        <content></content>
+        <updated>2024-03-17T23:59:06+08:00</updated>
+            <summary>
+                <![CDATA[
+                    测试01
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>测试01</p>
+            ]]>
+        </content>
     </entry>
     <entry>
         <title>常用设置</title>

@@ -13,13 +13,15 @@
             "id": "https://marc.stic.work/ce-shi.html",
             "url": "https://marc.stic.work/ce-shi.html",
             "title": "测试",
+            "summary": "测试01",
+            "content_html": "<p>测试01</p>",
             "author": {
                 "name": "梴湉ChanTian"
             },
             "tags": [
             ],
             "date_published": "2024-03-17T23:01:31+08:00",
-            "date_modified": "2024-03-17T23:01:31+08:00"
+            "date_modified": "2024-03-17T23:59:06+08:00"
         },
         {
             "id": "https://marc.stic.work/chang-yong-she-zhi.html",
