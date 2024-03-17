@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>常用设置 - ChanTian‘s Blog</title><meta name="description" content="http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://marc.stic.work/chang-yong-she-zhi.html"><link rel="alternate" type="application/atom+xml" href="https://marc.stic.work/feed.xml"><link rel="alternate" type="application/json" href="https://marc.stic.work/feed.json"><meta property="og:title" content="常用设置"><meta property="og:site_name" content="ChanTian‘s Blog"><meta property="og:description" content="http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main&hellip;"><meta property="og:url" content="https://marc.stic.work/chang-yong-she-zhi.html"><meta property="og:type" content="article"><link rel="preload" href="https://marc.stic.work/assets/dynamic/fonts/jetbrainsmono/jetbrainsmono.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://marc.stic.work/assets/css/style.css?v=0643aeb33172d8efe1d48cf7f23a4fbe"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://marc.stic.work/chang-yong-she-zhi.html"},"headline":"常用设置","datePublished":"2024-03-17T22:44","dateModified":"2024-03-17T22:44","description":"http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main&hellip;","author":{"@type":"Person","name":"梴湉ChanTian","url":"https://marc.stic.work/authors/chan-tian-chantian/"},"publisher":{"@type":"Organization","name":"梴湉ChanTian"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body><div class="container"><header class="header"><div class="header__logo"><a class="logo" href="https://marc.stic.work/">ChanTian‘s Blog</a></div><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://marc.stic.work/" target="_self">首页</a></li><li><a href="https://marc.stic.work/authors/chan-tian-chantian/" target="_self">本人</a></li><li><a href="https://github.com/marc-shen" target="_blank">GitHub</a></li><li><a href="https://marc.stic.work/feed.xml" target="_self">RSS</a></li></ul></nav></header><main class="content"><div class="banner banner--before-post"><script src="https://giscus.app/client.js" data-repo="marc-shen/marc-shen.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNDg4OTIxNzA=" data-category="Announcements" data-category-id="DIC_kwDODtXLCs4CeBwC" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script></div><article class="post"><header><h1 class="post__title">常用设置</h1><div class="post__meta"><time datetime="2024-03-17T22:44" class="post__date">March 17, 2024 </time><span class="post__author"><a href="https://marc.stic.work/authors/chan-tian-chantian/" class="feed__author">梴湉ChanTian</a></span></div><div class="post__tags"><a href="https://marc.stic.work/tags/jiao-cheng/" class="invert">教程</a></div></header><div class="post__entry"><pre><code>http://mirrors.tuna.tsinghua.edu.cn/ubuntu/
+</code></pre><pre><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+</code></pre><pre><code class="language-shell">sudo dpkg-reconfigure console-setup
+</code></pre><pre><code class="language-shell">sudo vim /etc/default/grub
+</code></pre><pre><code>GRUB_CMDLINE_LINUX=&quot;fbcon=rotate:1&quot;
+</code></pre><pre><code class="language-shell">sudo update-grub
+</code></pre><pre><code class="language-shell">echo 1 | sudo tee /sys/class/graphics/fbcon/rotate
+echo 1 | sudo tee /sys/class/graphics/fbcon/rotate_all
+</code></pre><pre><code class="language-shell">sudo apt install zsh
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+</code></pre><pre><code class="language-shell">sudo vim /etc/sudoers
+</code></pre><pre><code>username ALL=(ALL:ALL) NOPASSWD:ALL
+</code></pre><pre><code class="language-shell">sudo apt install build-essential
+</code></pre><pre><code class="language-shell">mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+</code></pre><pre><code>#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 4
+
+# specify all the variables
+EXECUTABLE=/home/chantian/tristan-mp-v2/bin/tristan-mp2d
+INPUT=/home/chantian/tristan-mp-v2/inputs/input.2d_rec
+OUTPUT_DIR=/home/chantian/program/output
+SLICE_DIR=/home/chantian/program/slices
+RESTART_DIR=/home/chantian/program/restart
+REPORT_FILE=report
+ERROR_FILE=error
+
+srun $EXECUTABLE -i $INPUT -o $OUTPUT_DIR -s $SLICE_DIR -r $RESTART_DIR &gt;$OUTPUT_DIR/$REPORT_FILE 2&gt;$OUTPUT_DIR/$ERROR_FILE
+</code></pre></div><footer class="wrapper post__footer"><p class="post__last-updated">This article was updated on March 17, 2024</p><div class="post__share"></div></footer><nav class="pagination"><div class="pagination__title"><span>Read other posts</span></div><div class="pagination__buttons"><a href="https://marc.stic.work/newsboatpei-zhi-2.html" class="btn previous" rel="prev" aria-label="[MISSING TRANSLATION]:  newsboat配置 "><span class="btn__icon">←</span> <span class="btn__text">newsboat配置</span></a></div></nav></article><div class="banner banner--after-post"><script src="https://giscus.app/client.js" data-repo="marc-shen/marc-shen.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNDg4OTIxNzA=" data-category="Announcements" data-category-id="DIC_kwDODtXLCs4CeBwC" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script></div></main><footer class="footer"><div class="footer__inner"><div class="footer__copyright"><p>© 2024 Powered by Publii CMS :: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank" rel="noopener">Theme</a> ported by the <a href="https://getpublii.com/customization-service/" target="_blank" rel="noopener">Publii Team</a></p></div></div></footer></div><script defer="defer" src="https://marc.stic.work/assets/js/scripts.min.js?v=74fad06980c30243d91d72c7c57fcdb8"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script></body></html>

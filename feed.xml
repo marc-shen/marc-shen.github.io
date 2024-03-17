@@ -3,12 +3,91 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-17T01:01:25+08:00</updated>
+    <updated>2024-03-17T22:44:36+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
+    <entry>
+        <title>常用设置</title>
+        <author>
+            <name>梴湉ChanTian</name>
+        </author>
+        <link href="https://marc.stic.work/chang-yong-she-zhi.html"/>
+        <id>https://marc.stic.work/chang-yong-she-zhi.html</id>
+            <category term="教程"/>
+
+        <updated>2024-03-17T22:44:36+08:00</updated>
+            <summary>
+                <![CDATA[
+                    http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <pre><code>http://mirrors.tuna.tsinghua.edu.cn/ubuntu/
+</code></pre>
+<pre><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+</code></pre>
+<pre><code class="language-shell">sudo dpkg-reconfigure console-setup
+</code></pre>
+<pre><code class="language-shell">sudo vim /etc/default/grub
+</code></pre>
+<pre><code>GRUB_CMDLINE_LINUX=&quot;fbcon=rotate:1&quot;
+</code></pre>
+<pre><code class="language-shell">sudo update-grub
+</code></pre>
+<pre><code class="language-shell">echo 1 | sudo tee /sys/class/graphics/fbcon/rotate
+echo 1 | sudo tee /sys/class/graphics/fbcon/rotate_all
+</code></pre>
+<pre><code class="language-shell">sudo apt install zsh
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+</code></pre>
+<pre><code class="language-shell">sudo vim /etc/sudoers
+</code></pre>
+<pre><code>username ALL=(ALL:ALL) NOPASSWD:ALL
+</code></pre>
+<pre><code class="language-shell">sudo apt install build-essential
+</code></pre>
+<pre><code class="language-shell">mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+</code></pre>
+<pre><code>#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 4
+
+# specify all the variables
+EXECUTABLE=/home/chantian/tristan-mp-v2/bin/tristan-mp2d
+INPUT=/home/chantian/tristan-mp-v2/inputs/input.2d_rec
+OUTPUT_DIR=/home/chantian/program/output
+SLICE_DIR=/home/chantian/program/slices
+RESTART_DIR=/home/chantian/program/restart
+REPORT_FILE=report
+ERROR_FILE=error
+
+srun $EXECUTABLE -i $INPUT -o $OUTPUT_DIR -s $SLICE_DIR -r $RESTART_DIR &gt;$OUTPUT_DIR/$REPORT_FILE 2&gt;$OUTPUT_DIR/$ERROR_FILE
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>newsboat配置</title>
         <author>
