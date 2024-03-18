@@ -10,16 +10,19 @@
     },
     "items": [
         {
-            "id": "https://marc.stic.work/ce-shi-01.html",
-            "url": "https://marc.stic.work/ce-shi-01.html",
-            "title": "测试01",
+            "id": "https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html",
+            "url": "https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html",
+            "title": "开源工具推荐TGPT",
+            "summary": "给Unix用户（Windows理论也能用）推荐一款很好用的、免费的、无需科学网络环境的命令行开源gpt工具。（命令行工具所特有的美感） github搜索aandrew-me/tgpt 链接：github.com/aandrew-me/tgpt",
+            "content_html": "<p>给Unix用户（Windows理论也能用）推荐一款很好用的、免费的、无需科学网络环境的命令行开源gpt工具。（命令行工具所特有的美感）\ngithub搜索aandrew-me/tgpt\n链接：github.com/aandrew-me/tgpt</p>",
             "author": {
                 "name": "梴湉ChanTian"
             },
             "tags": [
+                   "教程"
             ],
-            "date_published": "2024-03-17T23:59:49+08:00",
-            "date_modified": "2024-03-17T23:59:49+08:00"
+            "date_published": "2024-03-18T12:50:05+08:00",
+            "date_modified": "2024-03-18T20:27:46+08:00"
         },
         {
             "id": "https://marc.stic.work/chang-yong-she-zhi.html",

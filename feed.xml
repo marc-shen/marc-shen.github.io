@@ -3,23 +3,34 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-17T23:59:49+08:00</updated>
+    <updated>2024-03-18T20:27:46+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
     <entry>
-        <title>测试01</title>
+        <title>开源工具推荐TGPT</title>
         <author>
             <name>梴湉ChanTian</name>
         </author>
-        <link href="https://marc.stic.work/ce-shi-01.html"/>
-        <id>https://marc.stic.work/ce-shi-01.html</id>
+        <link href="https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html"/>
+        <id>https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html</id>
+            <category term="教程"/>
 
-        <updated>2024-03-17T23:59:49+08:00</updated>
-            <summary></summary>
-        <content></content>
+        <updated>2024-03-18T20:27:46+08:00</updated>
+            <summary>
+                <![CDATA[
+                    给Unix用户（Windows理论也能用）推荐一款很好用的、免费的、无需科学网络环境的命令行开源gpt工具。（命令行工具所特有的美感） github搜索aandrew-me/tgpt 链接：github.com/aandrew-me/tgpt
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>给Unix用户（Windows理论也能用）推荐一款很好用的、免费的、无需科学网络环境的命令行开源gpt工具。（命令行工具所特有的美感）
+github搜索aandrew-me/tgpt
+链接：github.com/aandrew-me/tgpt</p>
+            ]]>
+        </content>
     </entry>
     <entry>
         <title>常用设置</title>
