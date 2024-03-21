@@ -3,12 +3,32 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-18T20:27:46+08:00</updated>
+    <updated>2024-03-21T23:58:21+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
+    <entry>
+        <title>杂记</title>
+        <author>
+            <name>梴湉ChanTian</name>
+        </author>
+        <link href="https://marc.stic.work/za-ji.html"/>
+        <id>https://marc.stic.work/za-ji.html</id>
+
+        <updated>2024-03-21T23:58:21+08:00</updated>
+            <summary>
+                <![CDATA[
+                    写了些杂记，但是想了想，还是不要发出来了。就让本在这里的文字沉入信息的海洋里面吧。
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>写了些杂记，但是想了想，还是不要发出来了。就让本在这里的文字沉入信息的海洋里面吧。</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>开源工具推荐TGPT</title>
         <author>

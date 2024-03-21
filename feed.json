@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://marc.stic.work/za-ji.html",
+            "url": "https://marc.stic.work/za-ji.html",
+            "title": "杂记",
+            "summary": "写了些杂记，但是想了想，还是不要发出来了。就让本在这里的文字沉入信息的海洋里面吧。",
+            "content_html": "<p>写了些杂记，但是想了想，还是不要发出来了。就让本在这里的文字沉入信息的海洋里面吧。</p>",
+            "author": {
+                "name": "梴湉ChanTian"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-03-21T23:58:21+08:00",
+            "date_modified": "2024-03-21T23:58:21+08:00"
+        },
+        {
             "id": "https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html",
             "url": "https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html",
             "title": "开源工具推荐TGPT",
