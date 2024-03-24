@@ -3,12 +3,30 @@
     <title>ChanTian‘s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
-    <updated>2024-03-22T00:00:57+08:00</updated>
+    <updated>2024-03-24T20:25:48+08:00</updated>
     <author>
         <name>梴湉ChanTian</name>
     </author>
     <id>https://marc.stic.work</id>
 
+    <entry>
+        <title>测试</title>
+        <author>
+            <name>梴湉ChanTian</name>
+        </author>
+        <link href="https://marc.stic.work/ce-shi.html"/>
+        <id>https://marc.stic.work/ce-shi.html</id>
+
+        <updated>2024-03-24T20:25:48+08:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <link rel="stylesheet" href="APlayer.min.css">
+<div id="aplayer"></div>
+<script src="APlayer.min.js"></script>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>杂记</title>
         <author>
