@@ -15,9 +15,10 @@ const ap = new APlayer({
     {
       name: "一生有你",
       artist: "水木年华",
-      url: "http://music.163.com/song/media/outer/url?id=376417.mp3",
+      url: "https://marc.stic.work/media/music/一生有你-水木年华.flac",
       cover:
         "http://p2.music.126.net/4Tz-EfqUy0mbz6rJFRtrnA==/120946279073830.jpg?param=130y130",
+      lyric: "https://marc.stic.work/media/music/一生有你-水木年华.lrc",
       theme: "#ebd0c2",
     },
     {
