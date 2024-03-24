@@ -1,5 +1,5 @@
 const ap = new APlayer({
-  container: document.getElementById("player"),
+  container: document.getElementById("aplayer"),
   mini: false,
   autoplay: false,
   theme: "#FADFA3",
