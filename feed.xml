@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>ChanTian‘s Blog</title>
+    <title>Kadath Drawer &#x27;s Blog</title>
     <link href="https://marc.stic.work/feed.xml" rel="self" />
     <link href="https://marc.stic.work" />
     <updated>2024-03-30T22:57:13+08:00</updated>
     <author>
-        <name>梴湉ChanTian</name>
+        <name>幻夢境抽匣 Kadath Drawer</name>
     </author>
     <id>https://marc.stic.work</id>
 
     <entry>
         <title>测试</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/ce-shi.html"/>
         <id>https://marc.stic.work/ce-shi.html</id>
@@ -30,7 +30,7 @@
     <entry>
         <title>杂记</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/za-ji.html"/>
         <id>https://marc.stic.work/za-ji.html</id>
@@ -53,7 +53,7 @@
     <entry>
         <title>开源工具推荐TGPT</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html"/>
         <id>https://marc.stic.work/kai-yuan-gong-ju-tui-jian-tgpt.html</id>
@@ -76,7 +76,7 @@ github搜索aandrew-me/tgpt
     <entry>
         <title>常用设置</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/chang-yong-she-zhi.html"/>
         <id>https://marc.stic.work/chang-yong-she-zhi.html</id>
@@ -155,7 +155,7 @@ srun $EXECUTABLE -i $INPUT -o $OUTPUT_DIR -s $SLICE_DIR -r $RESTART_DIR &gt;$OUT
     <entry>
         <title>newsboat配置</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/newsboatpei-zhi-2.html"/>
         <id>https://marc.stic.work/newsboatpei-zhi-2.html</id>
@@ -240,7 +240,7 @@ highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
     <entry>
         <title>日本旅游</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/ri-ben-lu-you.html"/>
         <id>https://marc.stic.work/ri-ben-lu-you.html</id>
@@ -282,7 +282,7 @@ highlight article &quot;\\[image\\ [0-9]+\\]&quot; green default
     <entry>
         <title>Telescope</title>
         <author>
-            <name>梴湉ChanTian</name>
+            <name>幻夢境抽匣 Kadath Drawer</name>
         </author>
         <link href="https://marc.stic.work/telescope.html"/>
         <id>https://marc.stic.work/telescope.html</id>
