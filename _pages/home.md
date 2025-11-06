@@ -11,4 +11,4 @@ author_profile: true
 
 My name is Songyu Shen, an astronomy student from BNU.
 
-![Reconnection Animation](reconnection_animation.gif "Reconnection Animation")
+![Reconnection Animation](/assets/images/reconnection_animation.gif "Reconnection Animation")
