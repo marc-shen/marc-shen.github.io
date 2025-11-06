@@ -10,13 +10,13 @@ author_profile: true
 
 ## Nasa GCN Circulars
 
-- [Nasa GCN Circulars](https://gcn.nasa.gov/)
+- [Nasa GCN Circulars](https://gcn.nasa.gov/){:target="_blank"}
 
 - [NASA GCN Circulars Mirror
-](https://gcn.stic.work/)
+](https://gcn.stic.work/){:target="_blank"}
 
 ## BNU GRB Group
 
-- [BNU GRB Group GitHub Website](https://github.com/BNU-GRB)
+- [BNU GRB Group GitHub Website](https://github.com/BNU-GRB){:target="_blank"}
 
-- [BNU GRB Group CPU Server](http://ssh-grbcpu.stic.work)
+- [BNU GRB Group CPU Server](http://ssh-grbcpu.stic.work){:target="_blank"}

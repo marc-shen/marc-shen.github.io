@@ -122,10 +122,12 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/marc-shen"{:target="_blank"}
+      url: "https://github.com/marc-shen"
+      target: "_blank"
     - label: "Orcid"
       icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0009-0000-6275-3452"{:target="_blank"}
+      url: "https://orcid.org/0009-0000-6275-3452"
+      target: "_blank"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:bnushensy@outlook.com"
@@ -154,6 +156,7 @@ footer:
     - label: "GitHub this Repository"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/marc-shen/marc-shen.github.io"
+      target: "_blank"
     # - label: "GitLab"
     #   icon: "fab fa-fw fa-gitlab"
       # url:
