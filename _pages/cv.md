@@ -8,4 +8,4 @@ author_profile: true
 ---
 
 
-My cv is availible to be downloaded from [here](http://test.songyushen.com).
+My cv is availible to be downloaded from [here](http://test.songyushen.com){:target="_blank"} .
