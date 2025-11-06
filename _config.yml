@@ -122,10 +122,10 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/marc-shen"
+      url: "https://github.com/marc-shen"{:target="_blank"}
     - label: "Orcid"
       icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0009-0000-6275-3452"
+      url: "https://orcid.org/0009-0000-6275-3452"{:target="_blank"}
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:bnushensy@outlook.com"
@@ -269,6 +269,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-target-blank
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -277,6 +278,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-target-blank
 
 
 # Archives
