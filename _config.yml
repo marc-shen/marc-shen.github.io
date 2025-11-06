@@ -114,11 +114,11 @@ analytics:
 # Site Author
 author:
   name             : "Songyu Shen"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   pronouns         : "he/him/his" # optional
   bio              : "An astrotonmy student."
-  location         : "Beijing Normal University, Beijing, China"
-  email            : "bnushensy@outlook.com"
+  location         : "Beijing Normal University, China"
+  # email            : "bnushensy@outlook.com"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -143,27 +143,27 @@ author:
       url: "https://www.instagram.com/kadathdrawer/"
 
 # Site Footer
-footer:
-  links:
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-      # url:
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    # - label: "GitLab"
-    #   icon: "fab fa-fw fa-gitlab"
-      # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-  since: "2020"
+# footer:
+#   links:
+#     # - label: "Twitter"
+#     #   icon: "fab fa-fw fa-twitter-square"
+#       # url:
+#     # - label: "Facebook"
+#     #   icon: "fab fa-fw fa-facebook-square"
+#       # url:
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       # url:
+#     # - label: "GitLab"
+#     #   icon: "fab fa-fw fa-gitlab"
+#       # url:
+#     # - label: "Bitbucket"
+#     #   icon: "fab fa-fw fa-bitbucket"
+#       # url:
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       # url:
+#   since: "2020"
 
 
 # Reading Files
