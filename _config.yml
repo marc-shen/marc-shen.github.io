@@ -132,15 +132,15 @@ author:
     # - label: "blog"
     #   icon: "fas fa-fw fa-link"
     #   url: "https://blog.stic.work"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://x.com/KadathDrawer"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://x.com/KadathDrawer"
     # - label: "Facebook"
       # icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/kadathdrawer/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://www.instagram.com/kadathdrawer/"
 
 # # Site Footer
 footer:
