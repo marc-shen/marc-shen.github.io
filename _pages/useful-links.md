@@ -1,8 +1,8 @@
 
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Useful-Links"
+permalink: /useful-links/
 author_profile: true
 ---
 
