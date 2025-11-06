@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Welcome to Songyu Shne 's Homepage"
+title: "Welcome to Songyu Shen 's Homepage"
 permalink: /
 author_profile: true
 # redirect_from: 
