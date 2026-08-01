@@ -14,6 +14,8 @@ npm run dev
 
 Create a production build with `npm run build`. Pushes to the `master` branch
 are deployed to GitHub Pages by the workflow in `.github/workflows/deploy.yml`.
+In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**;
+the legacy branch source runs Jekyll and cannot build this Astro project.
 
 ## Content
 
