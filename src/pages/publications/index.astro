@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.publications.isActive === false) {
+    return Astro.redirect("/404");
+}
+---
+
+<BaseLayout
+    title={PAGES.publications.title}
+    description={PAGES.publications.subtitle}
+>
+    <div class="space-y-12 pb-12">
+        <header class="border-b border-border pb-10">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                Research output
+            </p>
+            <h1 class="mt-3 text-4xl font-semibold">
+                {PAGES.publications.title}
+            </h1>
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-text-muted">
+                {PAGES.publications.subtitle}
+            </p>
+        </header>
+
+        <section class="border-y border-border py-8">
+            <p class="text-lg leading-8 text-text-muted">
+                There is nothing here yet.
+            </p>
+        </section>
+    </div>
+</BaseLayout>

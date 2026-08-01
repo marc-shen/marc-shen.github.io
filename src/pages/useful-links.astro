@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const linkGroups = [
+    {
+        heading: "NASA GCN Circulars",
+        links: [
+            {
+                title: "NASA GCN Circulars",
+                href: "https://gcn.nasa.gov/",
+                desc: "The official General Coordinates Network website.",
+            },
+            {
+                title: "NASA GCN Circulars Mirror",
+                href: "https://gcn.stic.work/",
+                desc: "A mirror of NASA GCN Circulars.",
+            },
+        ],
+    },
+    {
+        heading: "BNU GRB Group",
+        links: [
+            {
+                title: "BNU GRB Group GitHub Website",
+                href: "https://github.com/BNU-GRB",
+                desc: "The BNU GRB Group organization on GitHub.",
+            },
+            {
+                title: "BNU GRB Group CPU Server",
+                href: "http://ssh-grbcpu.stic.work",
+                desc: "The BNU GRB Group CPU server.",
+            },
+        ],
+    },
+];
+---
+
+<BaseLayout
+    title="Useful Links"
+    description="Useful astronomy and BNU GRB Group links collected by Songyu Shen."
+>
+    <div class="space-y-12 pb-12">
+        <header class="border-b border-border pb-10">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                Resources
+            </p>
+            <h1 class="mt-3 text-4xl font-semibold">Useful Links</h1>
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-text-muted">
+                A collection of astronomy and research resources I use.
+            </p>
+        </header>
+
+        {
+            linkGroups.map((group) => (
+                <section class="space-y-5">
+                    <h2 class="text-2xl font-semibold">{group.heading}</h2>
+                    <div class="divide-y divide-border border-y border-border">
+                        {group.links.map((link) => (
+                            <a
+                                href={link.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                class="group flex items-baseline justify-between gap-6 py-5 no-underline"
+                            >
+                                <div>
+                                    <h3 class="text-lg font-medium text-foreground group-hover:text-accent">
+                                        {link.title}
+                                    </h3>
+                                    <p class="mt-1 leading-7 text-text-muted">
+                                        {link.desc}
+                                    </p>
+                                </div>
+                                <span class="shrink-0 text-accent transition-transform group-hover:translate-x-1">
+                                    ↗
+                                </span>
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            ))
+        }
+    </div>
+</BaseLayout>

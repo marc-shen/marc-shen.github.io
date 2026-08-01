@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const researchAreas = [
+    {
+        number: "01",
+        title: "Electromagnetic Wave–Plasma Interaction Calculation",
+        description:
+            "I contribute to EMPI, a high-performance computing software package for simulating the interaction between electromagnetic waves and plasma, with an emphasis on wave-spreading phenomena.",
+        href: "/projects/empi",
+    },
+    {
+        number: "02",
+        title: "PIC Simulation of Magnetic Reconnection",
+        description:
+            "I use the tristan-mp-v2 particle-in-cell code to study plasma physics problems, including magnetic reconnection and relativistic collisionless shocks.",
+        href: "/projects/tristan-mp-v2",
+    },
+];
+---
+
+<BaseLayout
+    title="Home"
+    description="Songyu Shen is an astronomy student at Beijing Normal University working on computational plasma physics."
+>
+    <div class="space-y-20 pb-12">
+        <section class="grid gap-10 pb-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div class="space-y-7">
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">
+                    Astronomy Student
+                </p>
+                <h1 class="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
+                    Welcome to Songyu Shen's homepage.
+                </h1>
+                <p class="max-w-2xl text-lg leading-8 text-text-muted">
+                    My name is Songyu Shen. I am an astronomy student at Beijing
+                    Normal University, working on computational plasma physics.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a
+                        href="/projects"
+                        class="rounded-md bg-accent px-5 py-3 text-sm font-medium text-white! no-underline transition-colors hover:bg-accent-strong hover:text-white!"
+                    >
+                        View Projects
+                    </a>
+                    <a
+                        href="/cv"
+                        class="rounded-md border border-border px-5 py-3 text-sm font-medium no-underline transition-colors hover:border-secondary hover:text-secondary"
+                    >
+                        View CV
+                    </a>
+                </div>
+            </div>
+
+            <figure class="research-visual">
+                <img
+                    src="/assets/images/EMPI.png"
+                    alt="Parallel EMPI plasma interaction calculation"
+                    width="1600"
+                    height="900"
+                    loading="eager"
+                />
+                <figcaption>Electromagnetic wave–plasma interaction calculation</figcaption>
+            </figure>
+        </section>
+
+        <section class="space-y-8">
+            <div class="flex items-end justify-between gap-6">
+                <div>
+                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                        Selected work
+                    </p>
+                    <h2 class="mt-2 text-2xl font-semibold">Research Topics</h2>
+                </div>
+                <a href="/projects" class="text-sm text-accent hover:underline">
+                    All projects →
+                </a>
+            </div>
+
+            <div class="divide-y divide-border border-y border-border">
+                {
+                    researchAreas.map((item) => (
+                        <article class="grid gap-3 py-7 sm:grid-cols-[3rem_1fr_auto] sm:items-start">
+                            <span class="font-mono text-sm text-accent">
+                                {item.number}
+                            </span>
+                            <div>
+                                <h3 class="text-lg font-medium text-accent!">
+                                    {item.title}
+                                </h3>
+                                <p class="mt-2 leading-7 text-text-muted">
+                                    {item.description}
+                                </p>
+                            </div>
+                            <a
+                                href={item.href}
+                                class="text-sm text-accent no-underline hover:underline"
+                                aria-label={`Read more about ${item.title}`}
+                            >
+                                Read more →
+                            </a>
+                        </article>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="grid gap-10 border-t border-border pt-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
+                <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                    Simulation
+                </p>
+                <h2 class="mt-3 text-2xl font-semibold">
+                    Particle-in-cell simulation of magnetic reconnection
+                </h2>
+                <p class="mt-4 leading-7 text-text-muted">
+                    A simulation from my work with the tristan-mp-v2 PIC code,
+                    used to investigate magnetic reconnection and relativistic
+                    collisionless shocks.
+                </p>
+            </div>
+            <figure class="research-visual">
+                <img
+                    src="/assets/images/reconnection_animation.gif"
+                    alt="Animation of a particle-in-cell magnetic reconnection simulation"
+                    width="1800"
+                    height="1400"
+                    loading="lazy"
+                />
+                <figcaption>PIC magnetic reconnection simulation</figcaption>
+            </figure>
+        </section>
+    </div>
+</BaseLayout>
+
+<style>
+    .research-visual {
+        overflow: hidden;
+        margin: 0;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background: var(--surface);
+    }
+
+    .research-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .research-visual figcaption {
+        padding: 0.75rem 1rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+</style>

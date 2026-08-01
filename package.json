@@ -1,27 +1,27 @@
 {
-  "name": "minimal-mistakes",
-  "private": true,
-  "version": "4.27.3",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mmistakes/minimal-mistakes.git"
-  },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "name": "songyu-shen-academic-portfolio",
+  "type": "module",
+  "version": "0.0.1",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=22.12.0"
   },
-  "devDependencies": {
-    "uglify-js": "^3.17.4"
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.7",
+    "katex": "^0.16.45",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "^4.2.2"
   }
 }

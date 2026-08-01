@@ -1,0 +1,90 @@
+---
+import { SITE, SOCIALS, SOCIAL_ICONS } from "../../config";
+import { getCollection } from "astro:content";
+import Icon from "../ui/Icon.astro";
+
+const activeSocials = SOCIALS.filter((s) => s.isActive);
+const bioCollection = await getCollection("bio");
+const bio = bioCollection[0]?.data;
+---
+
+<aside class="sidebar max-lg:flex-row max-lg:flex-wrap max-lg:gap-3 max-md:gap-2">
+    <div class="flex flex-col items-center text-center max-lg:flex-row max-lg:text-left max-lg:gap-3 max-lg:items-center max-md:gap-2">
+        {bio?.avatar && (
+            <img
+                src={`/${bio.avatar}`}
+                alt={`Avatar of ${bio.name}`}
+                width="160"
+                height={160}
+                class="sidebar-avatar"
+                loading="eager"
+                decoding="async"
+            />
+        )}
+        <div class="flex flex-col items-center max-lg:items-start">
+            {bio?.name && <h1 class="sidebar-name">{bio.name}</h1>}
+            {bio?.institution && (
+                <p class="sidebar-info">
+                    <Icon name="Institution" size={24} />
+                    {bio.institution}
+                </p>
+            )}
+            {bio?.shortBio && (
+                <p class="sidebar-bio mt-2 max-md:hidden">{bio.shortBio}</p>
+            )}
+            <div class="flex gap-1 flex-wrap items-center justify-center max-lg:justify-start mt-3">
+                {activeSocials.map((social) => (
+                    <a
+                        href={social.href}
+                        aria-label={social.linkTitle}
+                        title={social.linkTitle}
+                        target="_blank"
+                        rel="noreferrer"
+                        class="social-link"
+                    >
+                        <Icon name={SOCIAL_ICONS[social.name] || social.name} size={24} />
+                    </a>
+                ))}
+            </div>
+
+            {(bio?.email || bio?.orcid || bio?.github) && (
+                <dl class="sidebar-details">
+                    {bio.email && (
+                        <div class="sidebar-detail">
+                            <dt>Email</dt>
+                            <dd><a href={`mailto:${bio.email}`}>{bio.email}</a></dd>
+                        </div>
+                    )}
+                    {bio.orcid && (
+                        <div class="sidebar-detail">
+                            <dt>ORCID</dt>
+                            <dd>
+                                <a
+                                    href={`https://orcid.org/${bio.orcid}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {bio.orcid}
+                                </a>
+                            </dd>
+                        </div>
+                    )}
+                    {bio.github && (
+                        <div class="sidebar-detail">
+                            <dt>GitHub</dt>
+                            <dd>
+                                <a
+                                    href={`https://github.com/${bio.github}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    {bio.github}
+                                </a>
+                            </dd>
+                        </div>
+                    )}
+                </dl>
+            )}
+        </div>
+    </div>
+</aside>
