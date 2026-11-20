@@ -11,7 +11,7 @@ export const SITE: SiteConfig = {
 
   author: "Songyu Shen",
 
-  desc: "Academic portfolio of Songyu Shen, an astronomy student at Beijing Normal University working on computational plasma physics.",
+  desc: "Songyu Shen is an astronomy master's student at Beijing Normal University studying fast radio bursts, plasma propagation effects, and computational plasma physics.",
 
   title: "Songyu Shen",
 

@@ -15,7 +15,7 @@ export const PAGES: PagesConfig = {
 
   publications: {
     title: "Publications",
-    subtitle: "Research publications and academic output.",
+    subtitle: "Published papers, submitted manuscripts, and work in preparation.",
     isActive: true,
   },
 
@@ -27,7 +27,7 @@ export const PAGES: PagesConfig = {
 
   projects: {
     title: "Projects",
-    subtitle: "Selected work in computational plasma physics.",
+    subtitle: "Research in fast radio bursts, plasma simulations, and high-energy transients.",
     isActive: true,
   },
 
@@ -45,7 +45,7 @@ export const PAGES: PagesConfig = {
 
   cv: {
     title: "Curriculum Vitae",
-    subtitle: "Download my current curriculum vitae.",
+    subtitle: "Education, research experience, and academic activities.",
     isActive: true,
   },
 };

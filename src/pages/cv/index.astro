@@ -23,25 +23,18 @@ const { name, title, experience = [], education = [] } = cvEntry.data;
     <header class="page-header">
         <h1 class="page-title">{PAGES.cv.title}</h1>
         <p class="page-subtitle">{PAGES.cv.subtitle}</p>
+        <p class="mt-4 text-text-muted">{name} · {title}</p>
+        <a
+            href="/files/Songyu_Shen_CV.pdf"
+            download
+            data-astro-reload
+            class="mt-6 inline-block rounded-md bg-accent px-5 py-3 text-sm font-medium text-white! no-underline hover:bg-accent-strong"
+        >
+            Download CV (PDF)
+        </a>
     </header>
 
     <div class="container-narrow">
-        {
-            experience.length > 0 && (
-                <section class="section">
-                    <h2 class="section-title border-b border-border pb-2">
-                        Professional Experience
-                    </h2>
-                    <Timeline items={experience.map(exp => ({
-                        title: exp.role,
-                        subtitle: exp.institution,
-                        period: exp.period,
-                        description: exp.description
-                    }))} />
-                </section>
-            )
-        }
-
         {
             education.length > 0 && (
                 <section class="section">
@@ -54,6 +47,22 @@ const { name, title, experience = [], education = [] } = cvEntry.data;
                         period: edu.period,
                         description: edu.description,
                         thesis: edu.thesis
+                    }))} />
+                </section>
+            )
+        }
+
+        {
+            experience.length > 0 && (
+                <section class="section">
+                    <h2 class="section-title border-b border-border pb-2">
+                        Research Experience
+                    </h2>
+                    <Timeline items={experience.map(exp => ({
+                        title: exp.role,
+                        subtitle: exp.institution,
+                        period: exp.period,
+                        description: exp.description
                     }))} />
                 </section>
             )

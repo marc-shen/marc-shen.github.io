@@ -1,40 +1,58 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const publishedPapers = (await getCollection("publications"))
+    .filter(entry => entry.data.status === "Published")
+    .sort((a, b) => (b.data.date ?? "").localeCompare(a.data.date ?? ""));
 
 const researchAreas = [
     {
         number: "01",
-        title: "Electromagnetic Wave–Plasma Interaction Calculation",
+        title: "Plasma Propagation Effects · EMPI",
         description:
             "I contribute to EMPI, a high-performance computing software package for simulating the interaction between electromagnetic waves and plasma, with an emphasis on wave-spreading phenomena.",
         href: "/projects/empi",
     },
     {
         number: "02",
-        title: "PIC Simulation of Magnetic Reconnection",
+        title: "Fast Radio Bursts · FAST",
         description:
-            "I use the tristan-mp-v2 particle-in-cell code to study plasma physics problems, including magnetic reconnection and relativistic collisionless shocks.",
-        href: "/projects/tristan-mp-v2",
+            "Since April 2026, I have participated in the FAST FRB Key Science Project, studying fast radio bursts with the FAST radio telescope.",
+        href: "/projects/fast-frb",
+    },
+    {
+        number: "03",
+        title: "High-Energy Transients · Simulations & Satellites",
+        description:
+            "My earlier work includes particle-in-cell simulations of shocks and magnetic reconnection, student leadership of BNU's GRID07 satellite in the Tiange program, and supernova searches in ZTF data.",
+        href: "/projects",
     },
 ];
 ---
 
 <BaseLayout
     title="Home"
-    description="Songyu Shen is an astronomy student at Beijing Normal University working on computational plasma physics."
+    description="Songyu Shen is an astronomy master's student at Beijing Normal University studying fast radio bursts and plasma propagation effects."
 >
     <div class="space-y-20 pb-12">
         <section class="grid gap-10 pb-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div class="space-y-7">
                 <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">
-                    Astronomy Student
+                    Master's Student in Astronomy
                 </p>
                 <h1 class="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
                     Welcome to Songyu Shen's homepage.
                 </h1>
                 <p class="max-w-2xl text-lg leading-8 text-text-muted">
-                    My name is Songyu Shen. I am an astronomy student at Beijing
-                    Normal University, working on computational plasma physics.
+                    I am a master's student in Astronomy at Beijing Normal
+                    University, advised by Prof. He Gao. I study fast radio
+                    bursts and plasma propagation effects through numerical
+                    simulations and high-performance computing.
+                </p>
+                <p class="max-w-2xl leading-7 text-text-muted">
+                    I received my bachelor's degree in Astronomy from BNU in
+                    2024 and expect to complete my master's degree in June 2027.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a
@@ -48,6 +66,9 @@ const researchAreas = [
                         class="rounded-md border border-border px-5 py-3 text-sm font-medium no-underline transition-colors hover:border-secondary hover:text-secondary"
                     >
                         View CV
+                    </a>
+                    <a href="/files/Songyu_Shen_CV.pdf" download data-astro-reload class="self-center text-sm font-medium">
+                        Download CV (PDF)
                     </a>
                 </div>
             </div>
@@ -67,13 +88,13 @@ const researchAreas = [
         <section class="space-y-8">
             <div class="flex items-end justify-between gap-6">
                 <div>
-                    <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                    <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">
                         Selected work
                     </p>
                     <h2 class="mt-2 text-2xl font-semibold">Research Topics</h2>
                 </div>
                 <a href="/projects" class="text-sm text-accent hover:underline">
-                    All projects →
+                    All projects
                 </a>
             </div>
 
@@ -97,7 +118,7 @@ const researchAreas = [
                                 class="text-sm text-accent no-underline hover:underline"
                                 aria-label={`Read more about ${item.title}`}
                             >
-                                Read more →
+                                Read more
                             </a>
                         </article>
                     ))
@@ -107,7 +128,7 @@ const researchAreas = [
 
         <section class="grid gap-10 border-t border-border pt-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <div>
-                <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">
                     Simulation
                 </p>
                 <h2 class="mt-3 text-2xl font-semibold">
@@ -129,6 +150,50 @@ const researchAreas = [
                 />
                 <figcaption>PIC magnetic reconnection simulation</figcaption>
             </figure>
+        </section>
+
+        <section class="space-y-8">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                    <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">Research output</p>
+                    <h2 class="mt-2 text-2xl font-semibold">Recent Publications</h2>
+                </div>
+                <a href="/publications" class="text-sm">All publications & manuscripts</a>
+            </div>
+            <div class="divide-y divide-border border-y border-border">
+                {publishedPapers.map(({ id, data }) => (
+                    <article class="space-y-3 py-7">
+                        <p class="text-sm text-text-muted">{data.journal} · {data.date?.slice(0, 4)}</p>
+                        <h3 class="text-lg font-medium leading-7">
+                            <a href={`/publications/${id}`}>{data.title}</a>
+                        </h3>
+                        <p class="text-sm leading-6 text-text-muted">{data.author}</p>
+                    </article>
+                ))}
+            </div>
+        </section>
+
+        <section class="grid gap-10 sm:grid-cols-2">
+            <div class="space-y-4">
+                <h2 class="text-2xl font-semibold">Teaching & Outreach</h2>
+                <p class="leading-7 text-text-muted">
+                    I have served as a teaching assistant for Introduction to
+                    Astronomy II, Fundamentals of Linux Applications, and
+                    Academic Presentation Skills, and participated in AstroLink
+                    astronomy outreach for high school students.
+                </p>
+                <a href="/cv#teaching-and-outreach" class="inline-block text-sm">Teaching experience</a>
+            </div>
+            <div class="space-y-4">
+                <h2 class="text-2xl font-semibold">Academic Activities</h2>
+                <p class="leading-7 text-text-muted">
+                    I have presented my work at COSPAR and the Shen Kuo
+                    Conference, and served on local organizing committees for
+                    the Shen Kuo Conference and the Symposium on Fast Radio
+                    Bursts and Their Astrophysics.
+                </p>
+                <a href="/cv#conference-presentations" class="inline-block text-sm">Talks & academic service</a>
+            </div>
         </section>
     </div>
 </BaseLayout>

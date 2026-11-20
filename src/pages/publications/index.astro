@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { PAGES } from "../../config";
+import { getCollection } from "astro:content";
 
 if (PAGES.publications.isActive === false) {
     return Astro.redirect("/404");
 }
+
+const publications = await getCollection("publications");
+const groups = ["Published", "Submitted", "In preparation"] as const;
 ---
 
 <BaseLayout
@@ -13,7 +17,7 @@ if (PAGES.publications.isActive === false) {
 >
     <div class="space-y-12 pb-12">
         <header class="border-b border-border pb-10">
-            <p class="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+            <p class="font-mono text-sm uppercase tracking-[0.2em] text-accent">
                 Research output
             </p>
             <h1 class="mt-3 text-4xl font-semibold">
@@ -24,10 +28,29 @@ if (PAGES.publications.isActive === false) {
             </p>
         </header>
 
-        <section class="border-y border-border py-8">
-            <p class="text-lg leading-8 text-text-muted">
-                There is nothing here yet.
-            </p>
-        </section>
+        {groups.map(status => (
+            <section class="space-y-6">
+                <h2 class="text-2xl font-semibold">{status}</h2>
+                <div class="divide-y divide-border border-y border-border">
+                    {publications
+                        .filter(entry => entry.data.status === status)
+                        .sort((a, b) => (b.data.date ?? "").localeCompare(a.data.date ?? ""))
+                        .map(({ id, data }) => (
+                            <article class="space-y-3 py-7">
+                                <h3 class="text-lg font-semibold leading-7">
+                                    <a href={`/publications/${id}`}>{data.title}</a>
+                                </h3>
+                                <p class="leading-7 text-text-muted">{data.author}</p>
+                                {data.journal && <p class="text-sm">{data.journal} · {data.date?.slice(0, 4)}</p>}
+                                {data.external_url && (
+                                    <a href={data.external_url} class="inline-block text-sm font-medium">
+                                        DOI: {data.external_url.replace("https://doi.org/", "")}
+                                    </a>
+                                )}
+                            </article>
+                        ))}
+                </div>
+            </section>
+        ))}
     </div>
 </BaseLayout>

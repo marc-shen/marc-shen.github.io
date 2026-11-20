@@ -8,7 +8,11 @@ tags:
 external_url: https://github.com/PrincetonUniversity/tristan-mp-v2
 ---
 
-I use this particle-in-cell (PIC) code to study plasma physics problems,
-including magnetic reconnection and relativistic collisionless shocks.
+From 2023 to 2025, I used the tristan-mp-v2 particle-in-cell (PIC) code to
+investigate radiation mechanisms in high-energy transient sources, focusing
+on **magnetic reconnection and relativistic collisionless shocks**.
+
+This work, advised by **He Gao**, included my undergraduate thesis:
+*Plasma Numerical Simulation of Some Physical Mechanisms of Fast Radio Bursts*.
 
 [View tristan-mp-v2 on GitHub](https://github.com/PrincetonUniversity/tristan-mp-v2)
